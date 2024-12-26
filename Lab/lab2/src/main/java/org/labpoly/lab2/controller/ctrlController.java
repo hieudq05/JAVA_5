@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("ctrl")
-public class ctrlController {
+public class CtrlController {
     @Autowired
     HttpServletRequest request;
 

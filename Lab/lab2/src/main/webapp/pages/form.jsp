@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Bai 2</title>
 </head>
 <body>
-
+<form action="/param/save/2021" method="post">
+    <input name="y" value="2031">
+    <button>Save</button>
+</form>
+<ul>
+    <li>Path variable: ${x}</li>
+    <li>Request param: ${y}</li>
+</ul>
 </body>
 </html>
