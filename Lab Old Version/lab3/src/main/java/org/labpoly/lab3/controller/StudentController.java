@@ -52,7 +52,7 @@ public class StudentController {
     }
 
     @GetMapping("form")
-    public String form(@ModelAttribute("student") Student student, Model model) {
+    public String form(@ModelAttribute("student") Student student) {
         return "studentForm";
     }
 

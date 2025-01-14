@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3 - Product form</title>
+</head>
+<body>
+<form action="/product/save" method="post">
+  <input name="name" type="text" placeholder="Product name" required>
+  <input name="price" type="text" placeholder="Price" required>
+  <button>Save</button>
+</form>
+<ul th:if="${product != null}">
+  <li th:text="'Name: '+${product.getName()}"></li>
+  <li th:text="'Price: '+${product.getPrice()}"></li>
+</ul>
+</body>
+</html>

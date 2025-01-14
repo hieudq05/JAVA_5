@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Form Select</title>
+</head>
+<body>
+<h2>Select Box is Filled by Staffs List</h2>
+<select id="staffList" name="staffList">
+  <th:block th:each="staff : ${staffs}">
+    <option th:value="${staff.id}" th:text="${staff.getFullname()}"></option>
+  </th:block>
+</select>
+<br>
+<h2>Radio Button is Filled by Staff List</h2>
+<th:block th:each="staff : ${staffs}">
+  <input type="radio" th:value="${staff.id}" th:id="${staff.id}" name="staff">
+  <label th:for="${staff.id}" th:text="${staff.getFullname()}"></label>
+  <br>
+</th:block>
+</body>
+</html>

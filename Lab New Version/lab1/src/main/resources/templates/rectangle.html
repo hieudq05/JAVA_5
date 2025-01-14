@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5 - Rectangle</title>
+</head>
+<body>
+<form method="post" action="/rectangle">
+  <input type="text" name="width" placeholder="Width">
+  <input type="text" name="height" placeholder="Height">
+  <input type="submit">
+</form>
+<h4>Result</h4>
+<ul>
+  <li th:text="'S = '+${s}"></li>
+  <li th:text="'P = '+${p}"></li>
+</ul>
+</body>
+</html>

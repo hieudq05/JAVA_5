@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="header(title)">
+  <div class="title">
+    <h1 th:text="#{header.name}" class="upper"></h1>
+    <div>
+      <a th:href="@{?lang=vi}" th:text="${'Tiếng Việt'}"></a>
+      <a th:href="@{?lang=en}" th:text="${'English'}"></a>
+    </div>
+  </div>
+  <div th:replace="~{layoutOfFrag/navbar :: nav}"></div>
+</div>
+</body>
+</html>

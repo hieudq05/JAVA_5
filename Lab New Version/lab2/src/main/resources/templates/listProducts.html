@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4 - List Products</title>
+</head>
+<body>
+<form action="/products/save" method="post">
+    <input name="name" th:value="${product.name}"><br>
+    <input name="price" th:value="${product.price}"><br>
+    <button>Save</button>
+</form>
+<ol>
+    <li th:each="productitem : ${products}">
+        <ul>
+            <li th:text="${productitem.name}"/>
+            <li th:text="${productitem.price}"/>
+        </ul>
+    </li>
+</ol>
+</body>
+</html>

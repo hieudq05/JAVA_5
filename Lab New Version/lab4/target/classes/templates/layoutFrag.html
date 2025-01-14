@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout change by Fragment</title>
+</head>
+<style>
+    .title{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .upper{
+        text-transform: capitalize;
+    }
+</style>
+<body>
+<div th:replace="~{layoutOfFrag/header :: header(${fragName})}"></div>
+<div th:replace="~{layoutOfFrag/body :: bodyLayout(${fragName})}"></div>
+<div th:replace="~{layoutOfFrag/footer :: footer()}"></div>
+</body>
+</html>
